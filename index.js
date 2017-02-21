@@ -12,8 +12,24 @@ module.exports = {
         editor: {
             process: function(blk) {
                 var code = blk.body;
+                var pxtconfig = {
+                    "name": "Untitled",
+                    "version": "0.0.0",
+                    "license": "MIT",
+                    "dependencies": {
+                        "core": "*",
+                        "radio": "*"
+                    },
+                    "files": [
+                        "main.ts"
+                    ]
+                }
+                var files = [
+                    "main.ts": code,
+                    "pxt.json": JSON.stringify(pxtconfig, null, 2);
+                ]
                 var project = {
-                    source: code,
+                    source: JSON.stringify(files, null, 2),
                     meta: {}
                 }
                 var projectstr = JSON.stringify(project, null, 2);
