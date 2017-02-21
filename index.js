@@ -2,10 +2,17 @@ module.exports = {
     // Extend templating blocks
     blocks: {
         // Author will be able to write "{% blocks %} basic.showString("Hello world") {% endblocks %}"
-        blocks: {
+        sim: {
             process: function(blk) {
                 var code = blk.body;
                 var url = `https://pxt.microbit.org/beta---run?code=${code}`;
+                return '<div style="position:relative;height:0;padding-bottom:81.97%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
+            }
+        },
+        editor: {
+            process: function(blk) {
+                var code = blk.body;
+                var url = `https://pxt.microbit.org/beta#sandbox=1`;
                 return '<div style="position:relative;height:0;padding-bottom:81.97%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
             }
         }
