@@ -24,10 +24,10 @@ module.exports = {
                         "main.ts"
                     ]
                 }
-                var files = [
+                var files = {
                     "main.ts": code,
-                    "pxt.json": JSON.stringify(pxtconfig, null, 2);
-                ]
+                    "pxt.json": JSON.stringify(pxtconfig, null, 2)
+                }
                 var project = {
                     source: JSON.stringify(files, null, 2),
                     meta: {}
