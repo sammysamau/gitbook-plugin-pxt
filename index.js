@@ -12,7 +12,12 @@ module.exports = {
         editor: {
             process: function(blk) {
                 var code = blk.body;
-                var url = `https://pxt.microbit.org/beta#sandbox=1`;
+                var project = {
+                    source: code,
+                    meta: {}
+                }
+                var projectstr = JSON.stringify(project, null, 2);
+                var url = `https://pxt.microbit.org/beta#sandboxproject=${projectstr}`;
                 return '<div style="position:relative;height:0;padding-bottom:81.97%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
             }
         }
