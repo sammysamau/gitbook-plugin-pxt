@@ -51,10 +51,12 @@ module.exports = {
 
     // Extend templating blocks
     blocks: {
-        // Author will be able to write "{% myTag %}World{% endMyTag %}"
-        myTag: {
+        // Author will be able to write "{% blocks %} basic.showString("Hello world") {% endblocks %}"
+        blocks: {
             process: function(blk) {
-                return "Hello "+blk.body;
+                var code = blk.body;
+
+                return '<div style="position:relative;height:0;padding-bottom:81.97%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://pxt.microbit.org/beta---run?id=89991-90132-84483-40450" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
             }
         }
     },
