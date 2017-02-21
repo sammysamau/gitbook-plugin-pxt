@@ -1,17 +1,18 @@
 {
     "name": "gitbook-plugin-pxt",
-    "version": "0.0.1",
-    "description": "GitBook plugin for pxt",
+    "description": "GitBook plugin for PXT",
+    "main": "index.js",
+    "version": "0.0.2",
     "engines": {
-        "gitbook": ">1.x.x"
+        "gitbook": "*"
     },
-    "gitbook": {
-        "properties": {
-            "pxt": {
-                "type": "string",
-                "default": "pxt.microbit.org",
-                "description": "PXT website"
-            }
-        }
+    "homepage": "https://github.com/samelhusseini/plugin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/samelhusseini/plugin.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/samelhusseini/plugin/issues"
     }
 }
