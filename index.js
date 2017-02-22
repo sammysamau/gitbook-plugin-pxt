@@ -16,6 +16,12 @@ module.exports = {
                 return '<div><iframe style="width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
             }
         },
+        docs: {
+            process: function(blk) {
+                var url = `https://pxt.microbit.org/beta---docs#md:${encodeURIComponent(blk.body)}:blocks:en`;
+                return '<div><iframe style="width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
+            }
+        },
         js: {
             process: function(blk) {
                 var code = encodeURIComponent('```blocks\n' + blk.body + '\n```');
