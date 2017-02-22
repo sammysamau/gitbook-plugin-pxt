@@ -16,31 +16,10 @@ module.exports = {
                 return '<div style="position:relative;height:0;padding-bottom:81.97%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
             }
         },
-        editor: {
+        js: {
             process: function(blk) {
-                var code = blk.body;
-                var pxtconfig = {
-                    "name": "Untitled",
-                    "version": "0.0.0",
-                    "license": "MIT",
-                    "dependencies": {
-                        "core": "*",
-                        "radio": "*"
-                    },
-                    "files": [
-                        "main.ts"
-                    ]
-                }
-                var files = {
-                    "main.ts": code,
-                    "pxt.json": JSON.stringify(pxtconfig, null, 2)
-                }
-                var project = {
-                    source: JSON.stringify(files, null, 2),
-                    meta: {}
-                }
-                var projectstr = JSON.stringify(project, null, 2);
-                var url = `https://pxt.microbit.org/beta#sandboxproject=${projectstr}`;
+                var code = encodeURIComponent('```' + blk.body + '```');
+                var url = `https://pxt.microbit.org/beta---docs#md:${code}:js:en`;
                 return '<div style="position:relative;height:0;padding-bottom:81.97%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="' + url + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-scripts allow-same-origin" frameborder="0"></iframe></div>';
             }
         }
