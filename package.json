@@ -17,7 +17,7 @@
     },
     "gitbook": {
         "properties": {
-            "pxtsite": {
+            "base": {
                 "type": "string",
                 "default": "pxt.microbit.org"
             }
