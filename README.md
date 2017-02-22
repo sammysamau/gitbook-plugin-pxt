@@ -9,11 +9,12 @@ basic.showString("Hello!")
 })
 {% endsim %}
 ```
-
-  {% docs %}
-  ```blocks
-  input.onButtonPressed(Button.A, () => {
-  basic.showString("Hello!")
-  })
-  ```
-  {% enddocs %}
+<code>
+{% docs %}
+```blocks
+input.onButtonPressed(Button.A, () => {
+basic.showString("Hello!")
+})
+```
+{% enddocs %}
+</code>
