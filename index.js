@@ -15,7 +15,7 @@ module.exports = {
                 var code = encodeURIComponent(blk.body);
                 var url = `https://pxt.microbit.org/beta---docs#md:${code}:blocks:en`;
                 var padding = '70%';
-                return `<div style="position:relative;height:calc(${height}px + 5em);overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="${url}" frameborder="0" sandbox="allow-popups allow-scripts allow-same-origin"></iframe></div>`;
+                return `<div style="position:relative;height:0;padding-bottom:${padding};overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="${url}" frameborder="0" sandbox="allow-popups allow-scripts allow-same-origin"></iframe></div>`;
             }
         }
     }
