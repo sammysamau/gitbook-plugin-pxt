@@ -1,4 +1,4 @@
-YouTube videos in your book
+Gitbooks plugin for PXT
 ==============
 
 ### How to use it?
