@@ -12,10 +12,10 @@ basic.showString("Hello!")
 
 ```
 {% docs %}
-```blocks
+=```blocks
 input.onButtonPressed(Button.A, () => {
 basic.showString("Hello!")
 })
-```
+=```
 {% enddocs %}
 ```
