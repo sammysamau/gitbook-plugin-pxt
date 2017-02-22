@@ -46,4 +46,6 @@ input.onButtonPressed(Button.A, () => {
 ```
 
 
+## License
 
+MIT
