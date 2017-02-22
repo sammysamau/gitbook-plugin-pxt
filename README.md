@@ -35,7 +35,7 @@ input.onButtonPressed(Button.A, () => {
 {% endsim %}
 ```
 
-```markdown
+````markdown
 {% docs %}
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -43,7 +43,7 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 {% enddocs %}
-```
+````
 
 
 
