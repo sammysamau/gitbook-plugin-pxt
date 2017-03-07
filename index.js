@@ -23,7 +23,8 @@ module.exports = {
         code: function (blk) {
             var lang = blk.kwargs.language;
             var code = blk.body;
-            if (lang == "sim") {
+            var base = this.book.config.get('pluginsConfig.pxt.base', 'pxt.microbit.org');
+            if (lang == "sim") {             
                 var url = `https://${base}/beta---run?code=${code}`;
                 var padding = '81.97%';
                 return `<div style="position:relative;height:0;padding-bottom:${padding};overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="${url}" frameborder="0" sandbox="allow-popups allow-scripts allow-same-origin"></iframe></div>`;
